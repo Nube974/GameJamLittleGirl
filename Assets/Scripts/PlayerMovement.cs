@@ -49,6 +49,6 @@ public class PlayerMovement : MonoBehaviour
     {
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, playerJumpForce * Time.fixedDeltaTime + rb.linearVelocity.y);
         //rb.linearVelocity += Vector2.up * playerJumpForce * Time.fixedDeltaTime;
-        Debug.Log("Je saute !");
+        //Debug.Log("Je saute !");
     }
 }
