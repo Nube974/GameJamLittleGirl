@@ -13,7 +13,7 @@ public class PlayerAttack : MonoBehaviour
         if (Time.time < nextFireTime) return;
 
         // Fire1 = clic gauche / RT / etc. (Input Manager)
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Shoot"))
         {
             Shoot();
             nextFireTime = Time.time + fireCooldown;

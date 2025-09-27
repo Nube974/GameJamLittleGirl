@@ -633,7 +633,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   muzzle: {fileID: 1369312121}
   projectilePrefab: {fileID: 2971011977107958287, guid: dd567e7fc50220648abff64e1a60cd26, type: 3}
-  fireCooldown: 0.12
+  fireCooldown: 0.5
 --- !u!1 &983812704
 GameObject:
   m_ObjectHideFlags: 0
