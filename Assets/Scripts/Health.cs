@@ -76,12 +76,20 @@ public class Health : MonoBehaviour
     {
         if (!healthSlider) return;
 
-        healthSlider.minValue = minHealth;
+        healthSlider.minValue = minHealth;          // 0 recommandé
         healthSlider.maxValue = maxHealth;
-        healthSlider.value = currentHealth;
+        healthSlider.wholeNumbers = true;           // évite les décimales
+        healthSlider.value = Mathf.Clamp(currentHealth, minHealth, maxHealth);
 
-        if (hideSliderWhenFull)
-            healthSlider.gameObject.SetActive(currentHealth < maxHealth);
+        // Cache le handle et/ou le fill quand on est à 0
+        if (healthSlider.handleRect)
+            healthSlider.handleRect.gameObject.SetActive(currentHealth > minHealth);
+
+        if (healthSlider.fillRect)
+        {
+            var fillImg = healthSlider.fillRect.GetComponent<UnityEngine.UI.Image>();
+            if (fillImg) fillImg.enabled = currentHealth > minHealth;
+        }
     }
 
     /// <summary>Inflige des dégâts (valeur positive).</summary>
