@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6931074662670978016}
   - component: {fileID: 3824295317127925174}
   - component: {fileID: 2971011977107958287}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: HeartGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}

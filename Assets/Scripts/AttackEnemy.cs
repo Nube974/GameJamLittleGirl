@@ -20,7 +20,7 @@ public class AttackEnemy : MonoBehaviour
 
     [Header("Range")]
     [SerializeField] Transform firePoint;         // sortie du projectile
-    [SerializeField] HeartAmmo projectilePrefab;
+    [SerializeField] EnemyAmmo projectilePrefab;
     [SerializeField] float fireCooldown = 0.35f;
     [SerializeField] float projectileSpeed = 18f;
 
@@ -73,12 +73,22 @@ public class AttackEnemy : MonoBehaviour
     public void Fire()
     {
         if (Time.time < nextFireTime || !projectilePrefab || !firePoint) return;
-
         nextFireTime = Time.time + fireCooldown;
 
-        var proj = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);
+        // direction vers le joueur
         Vector2 dir = ((Vector2)(player.position - firePoint.position)).normalized;
-        proj.speed = projectileSpeed;   // champ public dans HeartProjectile2D
+
+        // décale légèrement le spawn devant le canon
+        Vector3 spawnPos = firePoint.position + (Vector3)(dir * 0.25f);
+
+        var proj = Instantiate(projectilePrefab, spawnPos, Quaternion.identity);
+
+        // ignorer la collision avec l'ennemi tireur
+        var projCol = proj.GetComponent<Collider2D>();
+        var selfCol = GetComponent<Collider2D>(); // mets le collider racine de l’ennemi
+        if (projCol && selfCol) Physics2D.IgnoreCollision(projCol, selfCol, true);
+
+        proj.speed = projectileSpeed;
         proj.Launch(dir);
     }
 
@@ -99,6 +109,12 @@ public class AttackEnemy : MonoBehaviour
         }
     }
 
+    public bool IsInShootRange()
+    {
+        if (attackType == AttackType.Melee) return false;
+        return PlayerInRange(attackDistance);
+    }
+
     // Gizmos pour régler facilement les portées
     void OnDrawGizmosSelected()
     {
@@ -110,5 +126,9 @@ public class AttackEnemy : MonoBehaviour
             Gizmos.color = Color.red;
             Gizmos.DrawWireSphere(meleePoint.position, meleeRadius);
         }
+        if (!firePoint) return;
+        Gizmos.color = Color.cyan;
+        Gizmos.DrawSphere(firePoint.position, 0.05f);
+        Gizmos.DrawLine(firePoint.position, firePoint.position + firePoint.right * 0.5f);
     }
 }
