@@ -2,17 +2,26 @@ using UnityEngine;
 
 public class HeartAmmo : MonoBehaviour
 {
-    public float speed = 20f;
-    public float maxDistance = 12f;
+    public float speed = 22f;
+    public float maxDistance = 20f;
     public int damage = 10;
 
-    Vector2 dir;
-    Vector2 startPos;
+    [Tooltip("Couches qui doivent prendre des dégâts (ex: Enemy)")]
+    public LayerMask hitMask;
 
-    public void Launch(Vector2 direction)
+    Vector2 dir, startPos;
+    Collider2D[] ownerCols; // colliders du tireur à ignorer
+
+    public void Launch(Vector2 direction, Collider2D[] ownerToIgnore = null)
     {
-        dir = direction.normalized;
+        dir = direction.sqrMagnitude > 0 ? direction.normalized : Vector2.right;
         startPos = transform.position;
+        ownerCols = ownerToIgnore;
+
+        // ignore le joueur (tous ses colliders)
+        var myCol = GetComponent<Collider2D>();
+        if (myCol != null && ownerCols != null)
+            foreach (var c in ownerCols) if (c) Physics2D.IgnoreCollision(myCol, c, true);
     }
 
     void Update()
@@ -24,15 +33,16 @@ public class HeartAmmo : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player")) return; // ignore le joueur
+        // ignore le tireur
+        if (ownerCols != null) foreach (var c in ownerCols) if (other == c) return;
 
-        // Option simple : touche un ennemi (tag "Enemy") -> dégâts
-        if (other.CompareTag("Enemy"))
-        {
-            // si tu as une interface/health, appelle-la ici
-            // other.GetComponent<IHealth>()?.TakeDamage(damage);
-        }
+        // ne réagit qu'aux layers ciblées
+        if ((hitMask.value & (1 << other.gameObject.layer)) == 0) return;
 
-        Destroy(gameObject); // s’arrête à l’impact
+        // récupère Health même si le collider est sur un enfant
+        var hp = other.GetComponent<Health>() ?? other.GetComponentInParent<Health>();
+        if (hp != null) hp.TakeDamage(damage);
+
+        Destroy(gameObject);
     }
 }
