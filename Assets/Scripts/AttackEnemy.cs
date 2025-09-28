@@ -100,10 +100,10 @@ public class AttackEnemy : MonoBehaviour
         nextMeleeTime = Time.time + meleeCooldown;
 
         var hit = Physics2D.OverlapCircle((Vector2)meleePoint.position, meleeRadius, playerMask);
-        //if (hit)
+        if (hit)
         {
             // Si tu as un système de vie :
-            //hit.GetComponent<IHealth>()?.TakeDamage(damage);
+            hit.GetComponent<Health>()?.TakeDamage(damage);
             // Sinon provisoire :
             // Debug.Log("Melee hit " + hit.name);
         }

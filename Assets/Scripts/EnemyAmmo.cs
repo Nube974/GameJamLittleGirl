@@ -44,15 +44,23 @@ public class EnemyAmmo : MonoBehaviour
         // Temps de grâce après le spawn
         if (t < spawnSafeTime) return;
 
-        // Ignore le tireur
+        Debug.Log($"[Projectile] hit {other.name} | layer={LayerMask.LayerToName(other.gameObject.layer)}");
+
+        // Ignore le tireur si tu stockes ses colliders
         if (ignored != null) foreach (var c in ignored) if (other == c) return;
 
         // ignore les autres projectiles (même layer)
         if (other.gameObject.layer == gameObject.layer) return;
 
-        Debug.Log($"Projectile hit: {other.name} (Layer: {LayerMask.LayerToName(other.gameObject.layer)})");
+        // Trouve la Health même si le collider est sur un enfant
+        var hp = other.GetComponent<Health>() ?? other.GetComponentInParent<Health>();
+        if (hp != null)
+        {
+            Debug.Log("[Projectile] found Health -> TakeDamage");
+            hp.TakeDamage(damage);
+        }
 
-        // TODO: infliger des dégâts ici si nécessaire
         Destroy(gameObject);
     }
+
 }
