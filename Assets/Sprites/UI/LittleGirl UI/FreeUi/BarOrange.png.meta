@@ -284,7 +284,14 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BarOrange_0: -8324648470814326097
+      BarOrange_1: 1543485936410743982
+      BarOrange_2: -8592173338627693707
+      BarOrange_3: 8419886052634943144
+      BarOrange_4: 6744228715847212961
+      BarOrange_5: -3116815100621527836
+      BarOrange_6: 1976851334698629135
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

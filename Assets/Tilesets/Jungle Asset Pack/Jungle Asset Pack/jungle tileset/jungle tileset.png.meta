@@ -834,7 +834,36 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      jungle tileset_0: -337650094436226022
+      jungle tileset_1: 4762510025463220358
+      jungle tileset_10: -4748219608448842564
+      jungle tileset_11: 6255656890204623732
+      jungle tileset_12: -8856663237800934286
+      jungle tileset_13: -7237579458346611564
+      jungle tileset_14: -3726219476323514782
+      jungle tileset_15: 6520680041915987534
+      jungle tileset_16: -5458122804092721661
+      jungle tileset_17: -8833861716742289968
+      jungle tileset_18: 1922136139609853226
+      jungle tileset_19: -3934263221575823159
+      jungle tileset_2: 2841706884336108830
+      jungle tileset_20: -3261541911563217398
+      jungle tileset_21: -2387910127377212895
+      jungle tileset_22: -5465477971330731349
+      jungle tileset_23: 4424424743136084365
+      jungle tileset_24: 5049845495281047351
+      jungle tileset_25: 8720780663327681697
+      jungle tileset_26: 653053054627100677
+      jungle tileset_27: 2620094406820684301
+      jungle tileset_28: 8362945715815971176
+      jungle tileset_3: 5702881312061213028
+      jungle tileset_4: 1675147065547018455
+      jungle tileset_5: -6678837315819468931
+      jungle tileset_6: 5884953701289943405
+      jungle tileset_7: 942894245647230796
+      jungle tileset_8: -2015094521346789308
+      jungle tileset_9: -3398328481707034505
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

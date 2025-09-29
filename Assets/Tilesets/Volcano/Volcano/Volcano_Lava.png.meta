@@ -1209,7 +1209,51 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Volcano_Lava_0: -1301927316136840742
+      Volcano_Lava_1: -6890528897008175116
+      Volcano_Lava_10: -1616487124862267020
+      Volcano_Lava_11: -5389218229010524436
+      Volcano_Lava_12: 5765654113796751479
+      Volcano_Lava_13: 2402777287226376617
+      Volcano_Lava_14: -5403676131347240513
+      Volcano_Lava_15: 3943772886629183076
+      Volcano_Lava_16: 4213330314633888456
+      Volcano_Lava_17: 8341312215804500578
+      Volcano_Lava_18: 2259716978549984458
+      Volcano_Lava_19: 1370976707415949387
+      Volcano_Lava_2: -765253377781453461
+      Volcano_Lava_20: -154748884547832029
+      Volcano_Lava_21: 5388143726836414374
+      Volcano_Lava_22: 711353740763062421
+      Volcano_Lava_23: 2381206088102676878
+      Volcano_Lava_24: 5692009920647866476
+      Volcano_Lava_25: -5287606956088833101
+      Volcano_Lava_26: 4703672669769396250
+      Volcano_Lava_27: -6492841461427970721
+      Volcano_Lava_28: 7787543420108813830
+      Volcano_Lava_29: -7226449631326217617
+      Volcano_Lava_3: -6680708792400669971
+      Volcano_Lava_30: 7023869470702005583
+      Volcano_Lava_31: -5097889451024006950
+      Volcano_Lava_32: 3760667233262747048
+      Volcano_Lava_33: -9024512021378366326
+      Volcano_Lava_34: -6444760746694802641
+      Volcano_Lava_35: -1592126392233285820
+      Volcano_Lava_36: 5780894498161017343
+      Volcano_Lava_37: -4391288232492349718
+      Volcano_Lava_38: 1653312337030487609
+      Volcano_Lava_39: 1581121488361836386
+      Volcano_Lava_4: -6036091304549873518
+      Volcano_Lava_40: -4577187527555176997
+      Volcano_Lava_41: 8754173517436652410
+      Volcano_Lava_42: 3747434215291196720
+      Volcano_Lava_43: -394606927528622802
+      Volcano_Lava_5: -415083460675905283
+      Volcano_Lava_6: -8184951496629454555
+      Volcano_Lava_7: -4572626065058076051
+      Volcano_Lava_8: -1989131887314393292
+      Volcano_Lava_9: 2408085192905977834
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

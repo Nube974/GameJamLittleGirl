@@ -909,7 +909,39 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ArrowDirections_0: 3032347039128409811
+      ArrowDirections_1: -5523223394996967134
+      ArrowDirections_10: -8281113013095380823
+      ArrowDirections_11: -3412765532107930454
+      ArrowDirections_12: 2878032915448121467
+      ArrowDirections_13: 1044282155851663454
+      ArrowDirections_14: -3033597421859319794
+      ArrowDirections_15: -7706911377435398452
+      ArrowDirections_16: -6938603142207136647
+      ArrowDirections_17: -6910700117123406758
+      ArrowDirections_18: 1965100220132545912
+      ArrowDirections_19: -2262145853804816726
+      ArrowDirections_2: 8114184418562701565
+      ArrowDirections_20: -811973383108375842
+      ArrowDirections_21: -364264232334959467
+      ArrowDirections_22: 5938950492960219631
+      ArrowDirections_23: 919070028431267357
+      ArrowDirections_24: 8019187072393388670
+      ArrowDirections_25: -7780160436968127640
+      ArrowDirections_26: 7550018864274002130
+      ArrowDirections_27: -7966169570306279891
+      ArrowDirections_28: 2591874274922715458
+      ArrowDirections_29: 9157427336342218862
+      ArrowDirections_3: -3520520315934427279
+      ArrowDirections_30: -1810260712327868492
+      ArrowDirections_31: -7210864976065397998
+      ArrowDirections_4: 3992182195710809795
+      ArrowDirections_5: -7568542880500058510
+      ArrowDirections_6: 3081150490182761908
+      ArrowDirections_7: 3485810273990156270
+      ArrowDirections_8: -5590022361657376397
+      ArrowDirections_9: 8381876015951712251
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -409,7 +409,19 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ClassicalButtons_0: -520553103380920165
+      ClassicalButtons_1: -6086444032502507836
+      ClassicalButtons_10: 1421983681797030840
+      ClassicalButtons_11: 8719492322419131463
+      ClassicalButtons_2: -1602051543148598252
+      ClassicalButtons_3: 7591122220136681868
+      ClassicalButtons_4: 8436472376085821337
+      ClassicalButtons_5: -5023789799248724872
+      ClassicalButtons_6: -66532297669052654
+      ClassicalButtons_7: -6881507112995300783
+      ClassicalButtons_8: 882367612244175557
+      ClassicalButtons_9: -5134049727578219386
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

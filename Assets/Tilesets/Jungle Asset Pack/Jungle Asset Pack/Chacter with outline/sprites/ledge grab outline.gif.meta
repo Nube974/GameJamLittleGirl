@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ledge grab outline_0: -7265946564198778366
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
