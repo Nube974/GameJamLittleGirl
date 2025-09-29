@@ -325,6 +325,8 @@ GameObject:
   - component: {fileID: 6104985976435522704}
   - component: {fileID: 6209695412390810506}
   - component: {fileID: 6659035792955328612}
+  - component: {fileID: 3811793282440685112}
+  - component: {fileID: 6650275373227057610}
   m_Layer: 8
   m_Name: Gunner
   m_TagString: Untagged
@@ -395,8 +397,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: -3561858456799500357, guid: 41e8d140cefe77445a3874aa63eae076, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -467,17 +469,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.016584754, y: 0.0033168793}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 2.1484375, y: 3.671875}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2.2272608, y: 3.7265086}
   m_EdgeRadius: 0
 --- !u!114 &6104985976435522704
 MonoBehaviour:
@@ -492,7 +494,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 1.5
-  chaseDistance: 2
+  chaseDistance: 1.24
   patrolOrChase: 1
   waypointsRoot: {fileID: 8463897551247831044}
   pingPong: 1
@@ -512,7 +514,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9872c8815ce65684abf0bb58c89665fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDistance: 1.55
+  attackDistance: 1.24
   damage: 10
   attackType: 1
   player: {fileID: 0}
@@ -544,6 +546,63 @@ MonoBehaviour:
   healthSlider: {fileID: 1200526794521927189}
   hideSliderWhenFull: 0
   destroyOnDeath: 0
+  OnHealed:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDamaged:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!95 &3811793282440685112
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3438376258276838528}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 760b1bc599bd4c94e8928b32cdb78e35, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6650275373227057610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3438376258276838528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7fef75fddfb00e40b16239a5497cd50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 3811793282440685112}
+  sprite: {fileID: 155866734102003057}
+  groundCheck: {fileID: 1853804364948628130}
+  groundSize: {x: 0.8, y: 0.16}
+  rb: {fileID: 425661361436910884}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  moveBool: Move
+  groundedBool: Grounded
+  speedFloat: Speed
+  moveThreshold: 0.05
+  faceTarget: 0
+  target: {fileID: 0}
 --- !u!1 &4522771048475768311
 GameObject:
   m_ObjectHideFlags: 0
