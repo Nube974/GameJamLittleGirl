@@ -44,14 +44,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93458aac1e5575f4c9bb43c301985893, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  victoryPanel: {fileID: 5262903023599453065, guid: bf2940063fc70a24e883dadddd34d2f6, type: 3}
-  defeatPanel: {fileID: 4667779631287565916, guid: 7a051e77a551d7f4b8b29f98fa3ef676, type: 3}
-  pausePanel: {fileID: 4640619873786923023, guid: 3e495583ec1cf7f44aaa36dd4893796e, type: 3}
-  hudPanel: {fileID: 0}
-  creditsPanel: {fileID: 0}
-  settingsPanel: {fileID: 0}
   mainMenuSceneName: MainMenu
   firstGameSceneName: 
-  playerHealth: {fileID: 7878718859806359553, guid: 66500ec79143eae4ca6a7bf442696809, type: 3}
+  victoryPanelName: Victory Screen
+  defeatPanelName: Defeat Screen
+  pausePanelName: PauseScreen
+  hudPanelName: Panel_HUD
+  creditsPanelName: Credits Screen
+  settingsPanelName: Settings Screen
   pauseKey: 27
   allowGamepadStart: 1

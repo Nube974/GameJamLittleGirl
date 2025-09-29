@@ -1873,14 +1873,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
-    - target: {fileID: 6970038364910075572, guid: bc4bcc594ed95164ebde4bb97c28124f, type: 3}
-      propertyPath: creditsPanel
-      value: 
-      objectReference: {fileID: 2071308095}
-    - target: {fileID: 6970038364910075572, guid: bc4bcc594ed95164ebde4bb97c28124f, type: 3}
-      propertyPath: settingsPanel
-      value: 
-      objectReference: {fileID: 774318172}
     - target: {fileID: 8450194613010947689, guid: bc4bcc594ed95164ebde4bb97c28124f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 957.25226
