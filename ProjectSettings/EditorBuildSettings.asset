@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Credits.unity
     guid: d61ffe60a8049c248be87dfd2e9ee0f5
+  - enabled: 1
+    path: Assets/Scenes/Training Prefabs.unity
+    guid: 8c11c87ad720d2847b76397f7221b46a
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: e3a8b85fe4f4ff94e88846a99a5c230a, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

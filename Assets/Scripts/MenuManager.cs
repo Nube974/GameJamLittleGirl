@@ -3,146 +3,98 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
-    [Header("Panels (assigne tes Canvas enfants)")]
-    public GameObject victoryPanel;
-    public GameObject defeatPanel;
-    public GameObject pausePanel;
-    public GameObject creditsPanel;
-    public GameObject settingsPanel;
-    public GameObject hudPanel;                 // HUD in-game (optionnel)
+
+    // -------- Singleton --------
+    public static MenuManager Instance { get; private set; }
+
+    public GameObject victoryPanel, defeatPanel, pausePanel, hudPanel, creditsPanel, settingsPanel;
 
     [Header("Scenes")]
     public string mainMenuSceneName = "MainMenu";
-    public string firstGameSceneName = "Level_01";   // pour StartGame()
+    public string firstGameSceneName = "Level_01";
 
-    [Header("Player (pour la défaite automatique)")]
-    public Health playerHealth;                 // glisse le Health du joueur (ou laisse vide et tag "Player")
+    [Header("Player")]
+    public Health playerHealth;                   // peut rester vide (autobind)
 
-    [Header("Options")]
+    [Header("Input")]
     public KeyCode pauseKey = KeyCode.Escape;
-    public bool allowGamepadStart = true;       // Start de la manette
+    public bool allowGamepadStart = true;         // Start/Options (JoystickButton7)
 
-    bool isPaused;
-    bool gameEnded;                              // victoire/défaite (bloque l’input)
+    bool paused, ended;
 
+    // ===== Singleton & lifecycle =====
     void Awake()
     {
-        // verrouillage de base
+        if (Instance != null && Instance != this) { Destroy(gameObject); return; }
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
+
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void Start()
+    {
         Time.timeScale = 1f;
-        HideAllPanels();
+        ShowPanel(null);
+
+        // Autobind du Health du joueur si non assigné
+        if (!playerHealth)
+        {
+            var p = GameObject.FindGameObjectWithTag("Player");
+            if (p) playerHealth = p.GetComponentInChildren<Health>();
+            if (!playerHealth) playerHealth = FindObjectOfType<Health>();
+        }
+        if (playerHealth) playerHealth.OnDeath.AddListener(OnPlayerDeath);
+    }
+
+    void OnDestroy()
+    {
+        if (playerHealth) playerHealth.OnDeath.RemoveListener(OnPlayerDeath);
     }
 
     void Update()
     {
-        if (gameEnded) return;
+        if (ended) return;
 
-        bool pausePressed = Input.GetKeyDown(pauseKey);
-        if (allowGamepadStart)
-        {
-            // Start (Xbox) = JoystickButton7 ; Options (PS) selon mapping -> souvent 7 aussi
-            pausePressed |= Input.GetKeyDown(KeyCode.JoystickButton7);
-            // ou si tu as défini un bouton "Pause" dans Input Manager :
-            pausePressed |= Input.GetButtonDown("Pause");
-        }
-
-        if (pausePressed) TogglePause();
+        bool press = Input.GetKeyDown(pauseKey);
+        if (allowGamepadStart) press |= Input.GetKeyDown(KeyCode.JoystickButton7) || Input.GetButtonDown("Pause");
+        if (press) TogglePause();
     }
 
-    // ---------- API PANELS ----------
-    public void Show(GameObject panel)
+    // ---------- Panels ----------
+    void ShowPanel(GameObject panel)
     {
-        HideAllPanels();
-        if (panel) panel.SetActive(true);
-
-        // HUD caché si on montre un écran (hors pause ? au choix)
-        if (hudPanel) hudPanel.SetActive(panel == null || panel == pausePanel ? true : false);
-    }
-
-    public void ShowPause()
-    {
-        if (gameEnded) return;
-        isPaused = true;
-        Time.timeScale = 0f;
-        Show(pausePanel);
-        // (désactive tes contrôles joueur si besoin)
-    }
-
-    public void HidePause()
-    {
-        isPaused = false;
-        Time.timeScale = 1f;
-        Show(null); // affiche juste le HUD
+        if (victoryPanel) victoryPanel.SetActive(panel == victoryPanel);
+        if (defeatPanel) defeatPanel.SetActive(panel == defeatPanel);
+        if (pausePanel) pausePanel.SetActive(panel == pausePanel);
+        if (creditsPanel) creditsPanel.SetActive(panel == creditsPanel);
+        if (settingsPanel) settingsPanel.SetActive(panel == settingsPanel);
+        if (hudPanel) hudPanel.SetActive(panel == null || panel == pausePanel);
     }
 
     public void TogglePause()
     {
-        if (isPaused) HidePause();
-        else ShowPause();
+        if (paused) { paused = false; Time.timeScale = 1f; ShowPanel(null); }
+        else { paused = true; Time.timeScale = 0f; ShowPanel(pausePanel); }
     }
 
-    public void ShowVictory()
-    {
-        gameEnded = true;
-        Time.timeScale = 0f;
-        Show(victoryPanel);
-    }
+    public void ShowVictory() { ended = true; Time.timeScale = 0f; ShowPanel(victoryPanel); }
+    public void ShowDefeat() { ended = true; Time.timeScale = 0f; ShowPanel(defeatPanel); }
+    public void ShowCredits() => ShowPanel(creditsPanel);
+    public void ShowSettings() => ShowPanel(settingsPanel);
 
-    public void ShowDefeat()
-    {
-        gameEnded = true;
-        Time.timeScale = 0f;
-        Show(defeatPanel);
-    }
-
-    public void ShowCredits() => Show(creditsPanel);
-    public void ShowSettings() => Show(settingsPanel);
-
-    void HideAllPanels()
-    {
-        if (victoryPanel) victoryPanel.SetActive(false);
-        if (defeatPanel) defeatPanel.SetActive(false);
-        if (pausePanel) pausePanel.SetActive(false);
-        if (creditsPanel) creditsPanel.SetActive(false);
-        if (settingsPanel) settingsPanel.SetActive(false);
-        if (hudPanel) hudPanel.SetActive(true);
-    }
-
-    // ---------- API SCÈNES / FLUX ----------
-    public void StartGame()
-    {
-        Time.timeScale = 1f;
-        if (!string.IsNullOrEmpty(firstGameSceneName))
-            SceneManager.LoadScene(firstGameSceneName);
-    }
-
+    // ---------- Scènes ----------
+    public void StartGame() => SceneManager.LoadScene(firstGameSceneName);
+    public void LoadRestartLevel() => SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     public void LoadNextLevel()
     {
-        Time.timeScale = 1f;
-        int next = SceneManager.GetActiveScene().buildIndex + 1;
-        if (next < SceneManager.sceneCountInBuildSettings)
-            SceneManager.LoadScene(next);
-        else if (!string.IsNullOrEmpty(mainMenuSceneName))
-            SceneManager.LoadScene(mainMenuSceneName);
+        int i = SceneManager.GetActiveScene().buildIndex + 1;
+        if (i < SceneManager.sceneCountInBuildSettings) SceneManager.LoadScene(i);
+        else SceneManager.LoadScene(mainMenuSceneName);
     }
-
-    public void LoadRestartLevel()
-    {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
-
-    public void LoadPause() => ShowPause();
-
-    public void ToMenu()
-    {
-        Time.timeScale = 1f;
-        if (!string.IsNullOrEmpty(mainMenuSceneName))
-            SceneManager.LoadScene(mainMenuSceneName);
-    }
-
+    public void ToMenu() => SceneManager.LoadScene(mainMenuSceneName);
     public void QuitGame()
     {
-        Time.timeScale = 1f;
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
 #else
@@ -150,9 +102,27 @@ public class MenuManager : MonoBehaviour
 #endif
     }
 
-    // ---------- Hooks logiques ----------
+    // ---------- Hooks ----------
     void OnPlayerDeath() => ShowDefeat();
+    public void TriggerVictory() => ShowVictory(); // à appeler depuis un trigger de fin
 
-    // Appelle ceci depuis un trigger de fin de niveau
-    public void TriggerVictory() => ShowVictory();
+    // ---------- Scène chargée ----------
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        // Vous pouvez ajouter ici le code à exécuter lors du chargement d'une scène,
+        // par exemple réinitialiser l'état des panneaux ou du joueur.
+        ShowPanel(null);
+        ended = false;
+        paused = false;
+        Time.timeScale = 1f;
+
+        // Autobind du Health du joueur si nécessaire
+        if (!playerHealth)
+        {
+            var p = GameObject.FindGameObjectWithTag("Player");
+            if (p) playerHealth = p.GetComponentInChildren<Health>();
+            if (!playerHealth) playerHealth = FindObjectOfType<Health>();
+        }
+        if (playerHealth) playerHealth.OnDeath.AddListener(OnPlayerDeath);
+    }
 }

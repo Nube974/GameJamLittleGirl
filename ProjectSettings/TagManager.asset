@@ -6,6 +6,11 @@ TagManager:
   tags:
   - Enemy
   - EnterJetpack
+  - UI_Victory
+  - UI_Defeat
+  - UI_Pause
+  - UI_Credits
+  - UI_Settings
   layers:
   - Default
   - TransparentFX
