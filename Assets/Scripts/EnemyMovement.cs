@@ -153,6 +153,8 @@ public class EnemyMovement : MonoBehaviour
 #if UNITY_EDITOR
     void OnDrawGizmosSelected()
     {
+        Gizmos.DrawWireSphere(transform.position, chaseDistance);
+
         // Affiche le chemin figé si possible
         if (wpWorld != null && wpWorld.Length > 0)
         {

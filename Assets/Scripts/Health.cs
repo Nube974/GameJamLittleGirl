@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class Health : MonoBehaviour
@@ -15,25 +16,20 @@ public class Health : MonoBehaviour
     [Header("Death")]
     [SerializeField] private bool destroyOnDeath = false; // sinon SetActive(false)
 
-    // Events utiles (optionnels)
-    public System.Action<int> OnDamaged;        // amount
-    public System.Action<int> OnHealed;         // amount
-    public System.Action OnDeath;
+    [Header("Events")]
+    public UnityEvent<int> OnHealed;            // valeur soignée
+    public UnityEvent<int> OnDamaged;           // dégâts subis
+    public UnityEvent OnDeath;
 
-    // --- Lifecycle ---
-    void Awake()
+    private void Start()
     {
+
         // init à la pleine vie si valeur non réglée
-        if (currentHealth <= 0) currentHealth = maxHealth;
-        UpdateSlider();
-    }
+        currentHealth = maxHealth;
+        healthSlider.minValue = minHealth;          // 0 recommandé
+        healthSlider.maxValue = maxHealth;
+        healthSlider.wholeNumbers = true;           // évite les décimales
 
-    void OnValidate()
-    {
-        if (maxHealth < 1) maxHealth = 1;
-        if (minHealth < 0) minHealth = 0;
-        if (minHealth > maxHealth) minHealth = maxHealth;
-        currentHealth = Mathf.Clamp(currentHealth, minHealth, maxHealth);
         UpdateSlider();
     }
 
@@ -59,6 +55,7 @@ public class Health : MonoBehaviour
             if (destroyOnDeath) Destroy(gameObject);
             else gameObject.SetActive(false);
         }
+
     }
 
     /// <summary>Remet la vie au maximum.</summary>
@@ -89,7 +86,7 @@ public class Health : MonoBehaviour
         {
             var fillImg = healthSlider.fillRect.GetComponent<UnityEngine.UI.Image>();
             if (fillImg) fillImg.enabled = currentHealth > minHealth;
-        }
+    }
     }
 
     /// <summary>Inflige des dégâts (valeur positive).</summary>
@@ -101,7 +98,13 @@ public class Health : MonoBehaviour
     }
 
     /// <summary>Vrai si la vie est au minimum (? minHealth).</summary>
-    public bool IsDead() => currentHealth <= minHealth;
+    public bool IsDead()
+    {
+        if(currentHealth <= minHealth)
+            return true;
+        else return false;
+
+    }
 
     // --- Helpers pratiques ---
     public int Current => currentHealth;
