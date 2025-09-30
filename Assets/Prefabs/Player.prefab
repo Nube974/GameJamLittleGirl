@@ -159,8 +159,8 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
-  jetpackAccel: 15
-  maxJetpackSpeed: 5
+  jetpackAccel: 30
+  maxJetpackSpeed: 15
   jetpackDuration: 1.5
   jetpackRechargePerSecond: 1.5
   jetpackResetOnLand: 0
