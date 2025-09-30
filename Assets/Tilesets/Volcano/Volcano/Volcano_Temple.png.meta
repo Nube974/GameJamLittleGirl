@@ -235,7 +235,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -249,7 +249,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 8
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -273,7 +273,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -301,10 +301,10 @@ TextureImporter:
       name: Volcano_Temple_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 45
-        width: 10
-        height: 10
+        x: 1
+        y: 46
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -323,10 +323,10 @@ TextureImporter:
       name: Volcano_Temple_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 36
-        width: 10
-        height: 10
+        x: 10
+        y: 46
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -345,10 +345,10 @@ TextureImporter:
       name: Volcano_Temple_2
       rect:
         serializedVersion: 2
-        x: 9
-        y: 45
-        width: 10
-        height: 10
+        x: 19
+        y: 46
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -367,10 +367,10 @@ TextureImporter:
       name: Volcano_Temple_3
       rect:
         serializedVersion: 2
-        x: 9
-        y: 36
-        width: 10
-        height: 10
+        x: 28
+        y: 46
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -389,10 +389,10 @@ TextureImporter:
       name: Volcano_Temple_4
       rect:
         serializedVersion: 2
-        x: 18
-        y: 45
-        width: 10
-        height: 10
+        x: 37
+        y: 46
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -411,10 +411,10 @@ TextureImporter:
       name: Volcano_Temple_5
       rect:
         serializedVersion: 2
-        x: 18
-        y: 36
-        width: 10
-        height: 10
+        x: 46
+        y: 46
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -433,10 +433,10 @@ TextureImporter:
       name: Volcano_Temple_6
       rect:
         serializedVersion: 2
-        x: 27
-        y: 45
-        width: 10
-        height: 10
+        x: 55
+        y: 46
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -455,10 +455,10 @@ TextureImporter:
       name: Volcano_Temple_7
       rect:
         serializedVersion: 2
-        x: 27
-        y: 36
-        width: 10
-        height: 10
+        x: 64
+        y: 46
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -477,10 +477,10 @@ TextureImporter:
       name: Volcano_Temple_8
       rect:
         serializedVersion: 2
-        x: 36
-        y: 45
-        width: 10
-        height: 10
+        x: 73
+        y: 46
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -499,10 +499,10 @@ TextureImporter:
       name: Volcano_Temple_9
       rect:
         serializedVersion: 2
-        x: 36
-        y: 36
-        width: 10
-        height: 10
+        x: 82
+        y: 46
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -521,10 +521,10 @@ TextureImporter:
       name: Volcano_Temple_10
       rect:
         serializedVersion: 2
-        x: 45
-        y: 45
-        width: 10
-        height: 10
+        x: 91
+        y: 46
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -543,10 +543,10 @@ TextureImporter:
       name: Volcano_Temple_11
       rect:
         serializedVersion: 2
-        x: 45
-        y: 36
-        width: 10
-        height: 10
+        x: 100
+        y: 46
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -565,10 +565,10 @@ TextureImporter:
       name: Volcano_Temple_12
       rect:
         serializedVersion: 2
-        x: 54
-        y: 45
-        width: 10
-        height: 10
+        x: 1
+        y: 37
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -587,10 +587,10 @@ TextureImporter:
       name: Volcano_Temple_13
       rect:
         serializedVersion: 2
-        x: 54
-        y: 36
-        width: 10
-        height: 10
+        x: 10
+        y: 37
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -609,10 +609,10 @@ TextureImporter:
       name: Volcano_Temple_14
       rect:
         serializedVersion: 2
-        x: 63
-        y: 45
-        width: 10
-        height: 10
+        x: 19
+        y: 37
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -631,10 +631,10 @@ TextureImporter:
       name: Volcano_Temple_15
       rect:
         serializedVersion: 2
-        x: 63
-        y: 36
-        width: 10
-        height: 10
+        x: 28
+        y: 37
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -653,10 +653,10 @@ TextureImporter:
       name: Volcano_Temple_16
       rect:
         serializedVersion: 2
-        x: 72
-        y: 45
-        width: 10
-        height: 10
+        x: 37
+        y: 37
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -675,10 +675,10 @@ TextureImporter:
       name: Volcano_Temple_17
       rect:
         serializedVersion: 2
-        x: 72
-        y: 36
-        width: 10
-        height: 10
+        x: 46
+        y: 37
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -697,10 +697,10 @@ TextureImporter:
       name: Volcano_Temple_18
       rect:
         serializedVersion: 2
-        x: 81
-        y: 45
-        width: 10
-        height: 10
+        x: 55
+        y: 37
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -719,10 +719,10 @@ TextureImporter:
       name: Volcano_Temple_19
       rect:
         serializedVersion: 2
-        x: 81
-        y: 36
-        width: 10
-        height: 10
+        x: 64
+        y: 37
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -741,10 +741,10 @@ TextureImporter:
       name: Volcano_Temple_20
       rect:
         serializedVersion: 2
-        x: 90
-        y: 45
-        width: 10
-        height: 10
+        x: 73
+        y: 37
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -763,10 +763,10 @@ TextureImporter:
       name: Volcano_Temple_21
       rect:
         serializedVersion: 2
-        x: 90
-        y: 36
-        width: 10
-        height: 10
+        x: 82
+        y: 37
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -785,10 +785,10 @@ TextureImporter:
       name: Volcano_Temple_22
       rect:
         serializedVersion: 2
-        x: 99
-        y: 45
-        width: 10
-        height: 10
+        x: 91
+        y: 37
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -807,10 +807,10 @@ TextureImporter:
       name: Volcano_Temple_23
       rect:
         serializedVersion: 2
-        x: 99
-        y: 36
-        width: 10
-        height: 10
+        x: 100
+        y: 37
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -829,10 +829,10 @@ TextureImporter:
       name: Volcano_Temple_24
       rect:
         serializedVersion: 2
-        x: 0
-        y: 27
-        width: 10
-        height: 10
+        x: 1
+        y: 28
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -851,10 +851,10 @@ TextureImporter:
       name: Volcano_Temple_25
       rect:
         serializedVersion: 2
-        x: 0
-        y: 18
-        width: 10
-        height: 10
+        x: 10
+        y: 28
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -873,10 +873,10 @@ TextureImporter:
       name: Volcano_Temple_26
       rect:
         serializedVersion: 2
-        x: 9
-        y: 27
-        width: 10
-        height: 10
+        x: 19
+        y: 28
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -895,10 +895,10 @@ TextureImporter:
       name: Volcano_Temple_27
       rect:
         serializedVersion: 2
-        x: 9
-        y: 18
-        width: 10
-        height: 10
+        x: 28
+        y: 28
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -917,10 +917,10 @@ TextureImporter:
       name: Volcano_Temple_28
       rect:
         serializedVersion: 2
-        x: 18
-        y: 27
-        width: 10
-        height: 10
+        x: 37
+        y: 28
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -939,10 +939,10 @@ TextureImporter:
       name: Volcano_Temple_29
       rect:
         serializedVersion: 2
-        x: 18
-        y: 18
-        width: 10
-        height: 10
+        x: 46
+        y: 28
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -961,10 +961,10 @@ TextureImporter:
       name: Volcano_Temple_30
       rect:
         serializedVersion: 2
-        x: 27
-        y: 27
-        width: 10
-        height: 10
+        x: 55
+        y: 28
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -983,10 +983,10 @@ TextureImporter:
       name: Volcano_Temple_31
       rect:
         serializedVersion: 2
-        x: 27
-        y: 18
-        width: 10
-        height: 10
+        x: 64
+        y: 28
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1005,10 +1005,10 @@ TextureImporter:
       name: Volcano_Temple_32
       rect:
         serializedVersion: 2
-        x: 36
-        y: 27
-        width: 10
-        height: 10
+        x: 82
+        y: 28
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1027,10 +1027,10 @@ TextureImporter:
       name: Volcano_Temple_33
       rect:
         serializedVersion: 2
-        x: 36
-        y: 18
-        width: 10
-        height: 10
+        x: 91
+        y: 28
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1049,10 +1049,10 @@ TextureImporter:
       name: Volcano_Temple_34
       rect:
         serializedVersion: 2
-        x: 45
-        y: 27
-        width: 10
-        height: 10
+        x: 100
+        y: 28
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1071,10 +1071,10 @@ TextureImporter:
       name: Volcano_Temple_35
       rect:
         serializedVersion: 2
-        x: 45
-        y: 18
-        width: 10
-        height: 10
+        x: 1
+        y: 19
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1093,10 +1093,10 @@ TextureImporter:
       name: Volcano_Temple_36
       rect:
         serializedVersion: 2
-        x: 54
-        y: 27
-        width: 10
-        height: 10
+        x: 10
+        y: 19
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1115,10 +1115,10 @@ TextureImporter:
       name: Volcano_Temple_37
       rect:
         serializedVersion: 2
-        x: 54
-        y: 18
-        width: 10
-        height: 10
+        x: 19
+        y: 19
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1137,10 +1137,10 @@ TextureImporter:
       name: Volcano_Temple_38
       rect:
         serializedVersion: 2
-        x: 63
-        y: 27
-        width: 10
-        height: 10
+        x: 28
+        y: 19
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1159,10 +1159,10 @@ TextureImporter:
       name: Volcano_Temple_39
       rect:
         serializedVersion: 2
-        x: 63
-        y: 18
-        width: 10
-        height: 10
+        x: 37
+        y: 19
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1181,10 +1181,10 @@ TextureImporter:
       name: Volcano_Temple_40
       rect:
         serializedVersion: 2
-        x: 81
-        y: 27
-        width: 10
-        height: 10
+        x: 46
+        y: 19
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1203,10 +1203,10 @@ TextureImporter:
       name: Volcano_Temple_41
       rect:
         serializedVersion: 2
-        x: 90
-        y: 27
-        width: 10
-        height: 10
+        x: 55
+        y: 19
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1225,10 +1225,10 @@ TextureImporter:
       name: Volcano_Temple_42
       rect:
         serializedVersion: 2
-        x: 99
-        y: 27
-        width: 10
-        height: 10
+        x: 64
+        y: 19
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1247,10 +1247,10 @@ TextureImporter:
       name: Volcano_Temple_43
       rect:
         serializedVersion: 2
-        x: 0
-        y: 9
-        width: 10
-        height: 10
+        x: 1
+        y: 10
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1269,10 +1269,10 @@ TextureImporter:
       name: Volcano_Temple_44
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 10
-        height: 10
+        x: 10
+        y: 10
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1291,10 +1291,10 @@ TextureImporter:
       name: Volcano_Temple_45
       rect:
         serializedVersion: 2
-        x: 9
-        y: 9
-        width: 10
-        height: 10
+        x: 19
+        y: 10
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1313,10 +1313,10 @@ TextureImporter:
       name: Volcano_Temple_46
       rect:
         serializedVersion: 2
-        x: 9
-        y: 0
-        width: 10
-        height: 10
+        x: 28
+        y: 10
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1335,10 +1335,10 @@ TextureImporter:
       name: Volcano_Temple_47
       rect:
         serializedVersion: 2
-        x: 18
-        y: 9
-        width: 10
-        height: 10
+        x: 37
+        y: 10
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1357,10 +1357,10 @@ TextureImporter:
       name: Volcano_Temple_48
       rect:
         serializedVersion: 2
-        x: 18
-        y: 0
-        width: 10
-        height: 10
+        x: 46
+        y: 10
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1379,10 +1379,10 @@ TextureImporter:
       name: Volcano_Temple_49
       rect:
         serializedVersion: 2
-        x: 27
-        y: 9
-        width: 10
-        height: 10
+        x: 55
+        y: 10
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1401,10 +1401,10 @@ TextureImporter:
       name: Volcano_Temple_50
       rect:
         serializedVersion: 2
-        x: 27
-        y: 0
-        width: 10
-        height: 10
+        x: 64
+        y: 10
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1423,10 +1423,10 @@ TextureImporter:
       name: Volcano_Temple_51
       rect:
         serializedVersion: 2
-        x: 36
-        y: 9
-        width: 10
-        height: 10
+        x: 73
+        y: 10
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1445,10 +1445,10 @@ TextureImporter:
       name: Volcano_Temple_52
       rect:
         serializedVersion: 2
-        x: 45
-        y: 9
-        width: 10
-        height: 10
+        x: 82
+        y: 10
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1467,10 +1467,10 @@ TextureImporter:
       name: Volcano_Temple_53
       rect:
         serializedVersion: 2
-        x: 54
-        y: 9
-        width: 10
-        height: 10
+        x: 91
+        y: 10
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1489,10 +1489,10 @@ TextureImporter:
       name: Volcano_Temple_54
       rect:
         serializedVersion: 2
-        x: 54
-        y: 0
-        width: 10
-        height: 10
+        x: 100
+        y: 10
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1511,10 +1511,10 @@ TextureImporter:
       name: Volcano_Temple_55
       rect:
         serializedVersion: 2
-        x: 63
-        y: 9
-        width: 10
-        height: 10
+        x: 109
+        y: 10
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1533,10 +1533,10 @@ TextureImporter:
       name: Volcano_Temple_56
       rect:
         serializedVersion: 2
-        x: 63
-        y: 0
-        width: 10
-        height: 10
+        x: 1
+        y: 1
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1555,10 +1555,10 @@ TextureImporter:
       name: Volcano_Temple_57
       rect:
         serializedVersion: 2
-        x: 72
-        y: 9
-        width: 10
-        height: 10
+        x: 10
+        y: 1
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1577,10 +1577,10 @@ TextureImporter:
       name: Volcano_Temple_58
       rect:
         serializedVersion: 2
-        x: 72
-        y: 0
-        width: 10
-        height: 10
+        x: 19
+        y: 1
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1599,10 +1599,10 @@ TextureImporter:
       name: Volcano_Temple_59
       rect:
         serializedVersion: 2
-        x: 81
-        y: 9
-        width: 10
-        height: 10
+        x: 28
+        y: 1
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1621,10 +1621,10 @@ TextureImporter:
       name: Volcano_Temple_60
       rect:
         serializedVersion: 2
-        x: 81
-        y: 0
-        width: 10
-        height: 10
+        x: 55
+        y: 1
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1643,10 +1643,10 @@ TextureImporter:
       name: Volcano_Temple_61
       rect:
         serializedVersion: 2
-        x: 90
-        y: 9
-        width: 10
-        height: 10
+        x: 64
+        y: 1
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1665,10 +1665,10 @@ TextureImporter:
       name: Volcano_Temple_62
       rect:
         serializedVersion: 2
-        x: 90
-        y: 0
-        width: 10
-        height: 10
+        x: 73
+        y: 1
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1687,10 +1687,10 @@ TextureImporter:
       name: Volcano_Temple_63
       rect:
         serializedVersion: 2
-        x: 99
-        y: 9
-        width: 10
-        height: 10
+        x: 82
+        y: 1
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1709,10 +1709,10 @@ TextureImporter:
       name: Volcano_Temple_64
       rect:
         serializedVersion: 2
-        x: 99
-        y: 0
-        width: 10
-        height: 10
+        x: 91
+        y: 1
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1731,10 +1731,10 @@ TextureImporter:
       name: Volcano_Temple_65
       rect:
         serializedVersion: 2
-        x: 108
-        y: 9
-        width: 10
-        height: 10
+        x: 100
+        y: 1
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1753,10 +1753,10 @@ TextureImporter:
       name: Volcano_Temple_66
       rect:
         serializedVersion: 2
-        x: 108
-        y: 0
-        width: 10
-        height: 10
+        x: 109
+        y: 1
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1775,7 +1775,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: aaf342d3283522540ad1198402e4e0ae
     internalID: 0
     vertices: []
     indices: 

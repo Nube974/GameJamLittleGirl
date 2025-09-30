@@ -474,7 +474,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 346587475257483285, guid: 2c6f1be220a35694491295e948b901c1, type: 3}
       propertyPath: Lens.OrthographicSize
-      value: 34.41
+      value: 95.6
       objectReference: {fileID: 0}
     - target: {fileID: 346587475257483285, guid: 2c6f1be220a35694491295e948b901c1, type: 3}
       propertyPath: Target.TrackingTarget
