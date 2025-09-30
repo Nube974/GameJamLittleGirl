@@ -178,4 +178,4 @@ MonoBehaviour:
   onlyOnce: 1
   delay: 0
   pauseOnFallback: 1
-  fallbackVictoryPanel: {fileID: 0}
+  fallbackVictoryPanel: {fileID: 5262903023599453065, guid: bf2940063fc70a24e883dadddd34d2f6, type: 3}

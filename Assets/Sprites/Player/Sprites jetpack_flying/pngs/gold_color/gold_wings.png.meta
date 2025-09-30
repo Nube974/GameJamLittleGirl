@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      gold_wings_0: 890869715474688429
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -274,6 +274,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Defeat Screen
       objectReference: {fileID: 0}
+    - target: {fileID: 4667779631287565916, guid: 7a051e77a551d7f4b8b29f98fa3ef676, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -712,15 +716,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5596565907191404340, guid: ec97e90b9727c4f43a55225295d8a3ed, type: 3}
       propertyPath: m_Value
-      value: 1
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 5596565907191404340, guid: ec97e90b9727c4f43a55225295d8a3ed, type: 3}
       propertyPath: m_MaxValue
-      value: 1
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 5596565907191404340, guid: ec97e90b9727c4f43a55225295d8a3ed, type: 3}
       propertyPath: m_WholeNumbers
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8348820955285859244, guid: ec97e90b9727c4f43a55225295d8a3ed, type: 3}
       propertyPath: m_Name

@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      gold_feather_0: 2768784037935306973
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      white_wings_0: 8720420444667819854
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

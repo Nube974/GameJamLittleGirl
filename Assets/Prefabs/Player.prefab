@@ -183,7 +183,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   muzzle: {fileID: 4149857971434921391}
   projectilePrefab: {fileID: 2971011977107958287, guid: dd567e7fc50220648abff64e1a60cd26, type: 3}
-  fireCooldown: 0.5
+  fireCooldown: 1
   aimNearestEnemy: 1
   aimRadius: 15
   enemyLayers:

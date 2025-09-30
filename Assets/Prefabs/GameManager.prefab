@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainMenuSceneName: MainMenu
-  firstGameSceneName: 
+  firstGameSceneName: Level 1
   victoryPanelName: Victory Screen
   defeatPanelName: Defeat Screen
   pausePanelName: PauseScreen
