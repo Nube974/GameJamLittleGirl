@@ -3,117 +3,63 @@ using UnityEngine;
 [RequireComponent(typeof(Animator))]
 public class EnemyAnimator : MonoBehaviour
 {
-    [Header("Refs (auto si vide)")]
-    public Animator animator;
-    public SpriteRenderer sprite;
-    public Transform groundCheck;                 // optionnel
-    public Vector2 groundSize = new(0.8f, 0.16f); // optionnel
-    public Rigidbody2D rb;                        // conseillé (peut être sur le parent)
-    public LayerMask groundLayer;                 // optionnel si Grounded utilisé
+    public Animator anim;
+    public Rigidbody2D rb;           // si le RB est sur le parent, glisse-le ici
+    public Transform movingRoot;     // l’objet qui se déplace réellement (souvent le parent)
 
-    [Header("Animator Params")]
-    public string moveBool = "Move";     // Idle/Run
-    public string groundedBool = "Grounded"; // si tu l'utilises
-    public string speedFloat = "Speed";    // si tu l'utilises
+    [Header("Paramètre Blend Tree")]
+    public string speedFloat = "Speed";
 
-    [Header("Flip / Cible")]
-    public bool faceTarget = false;          // TRUE = regarde toujours target
-    public Transform target;                 // joueur à suivre (si faceTarget)
-
-    [Header("Seuils & Lissage")]
-    public float enterRun = 0.12f;           // au-dessus => Run
-    public float exitRun = 0.08f;           // en-dessous => Idle
-    public float tinyKill = 0.02f;           // micro-vitesse clampée à 0
-    public float smooth = 0.12f;           // lissage expo pour Speed
-
-    [Header("Safeguard (si transition Run→Idle capricieuse)")]
-    public bool useSafeguard = true;
-    public string runStateName = "Run";     // nom EXACT de l’état Run
-    public string idleStateName = "Idle";    // nom EXACT de l’état Idle
-    public float crossFadeTime = 0.05f;
+    [Header("Réglages")]
+    public float tinyKill = 0.02f;   // micro-vitesse annulée
+    public float smooth = 0.12f;   // lissage expo (0.1–0.2)
+    public bool useAbsX = true;    // true: on anime sur la vitesse horizontale; false: magnitude 2D
 
     Vector3 lastPos;
-    float smoothedSpeed;
+    float smoothed;
 
     void Reset()
     {
-        animator = GetComponent<Animator>();
-        sprite = GetComponentInChildren<SpriteRenderer>();
+        anim = GetComponent<Animator>();
         rb = GetComponentInParent<Rigidbody2D>();
+        movingRoot = transform.root;
     }
 
     void Awake()
     {
-        if (!animator) animator = GetComponent<Animator>();
-        if (!sprite) sprite = GetComponentInChildren<SpriteRenderer>();
+        if (!anim) anim = GetComponent<Animator>();
         if (!rb) rb = GetComponentInParent<Rigidbody2D>();
-        lastPos = transform.position;
+        if (!movingRoot) movingRoot = transform.root;
+        lastPos = (movingRoot ? movingRoot.position : transform.position);
     }
 
     void Update()
     {
-        // ---- vitesse horizontale (RB si dispo, sinon delta position)
-        float vx = rb ? rb.linearVelocity.x
-                      : (transform.position.x - lastPos.x) / Mathf.Max(Time.deltaTime, 0.0001f);
+        // 1) calcule la vitesse
+        Vector2 vel = Vector2.zero;
 
-        // tue la micro-vitesse pour éviter le jitter autour de 0
-        if (Mathf.Abs(vx) < tinyKill) vx = 0f;
-        if (rb && Mathf.Abs(rb.linearVelocity.x) < tinyKill)
-            rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
+        // a) priorité: rb.velocity si ça reflète le mouvement
+        if (rb) vel = rb.linearVelocity;
 
-        float ax = Mathf.Abs(vx);
-
-        // ---- hysteresis Move (évite pompage)
-        bool moving = animator.GetBool(moveBool);
-        if (!moving && ax > enterRun) moving = true;
-        else if (moving && ax < exitRun) moving = false;
-        animator.SetBool(moveBool, moving);
-
-        // ---- Speed lissée (si param utilisé / blend tree)
-        if (!string.IsNullOrEmpty(speedFloat))
+        // b) fallback: delta position du root (utile si MovePosition, Translate, ou kinematic)
+        if (vel.sqrMagnitude < 0.0001f)
         {
-            smoothedSpeed = Mathf.Lerp(smoothedSpeed, ax, 1f - Mathf.Exp(-smooth * Time.deltaTime));
-            animator.SetFloat(speedFloat, smoothedSpeed);
+            Vector3 cur = movingRoot ? movingRoot.position : transform.position;
+            Vector3 delta = (cur - lastPos);
+            float dt = Mathf.Max(Time.deltaTime, 0.0001f);
+            vel = delta / dt;
+            lastPos = cur;
         }
 
-        // ---- Grounded (optionnel)
-        if (groundCheck && !string.IsNullOrEmpty(groundedBool))
-        {
-            bool grounded = Physics2D.OverlapBox(groundCheck.position, groundSize, 0f, groundLayer);
-            animator.SetBool(groundedBool, grounded);
-        }
+        // 2) choix de la métrique et nettoyage des micro-vitesses
+        float speed = useAbsX ? Mathf.Abs(vel.x) : vel.magnitude;
+        if (speed < tinyKill) speed = 0f;
 
-        // ---- SpriteDirectionChecker (flip)
-        if (faceTarget && target)
-        {
-            float dir = target.position.x - transform.position.x;
-            if (Mathf.Abs(dir) > 0.0001f) sprite.flipX = dir < 0f;
-        }
-        else
-        {
-            if (Mathf.Abs(vx) > 0.001f && sprite) sprite.flipX = vx < 0f;
-        }
+        // 3) lissage et push vers l’Animator
+        smoothed = Mathf.Lerp(smoothed, speed, 1f - Mathf.Exp(-smooth * Time.deltaTime));
+        anim.SetFloat(speedFloat, smoothed);
 
-        // ---- Safeguard : si Move=false mais on reste bloqué en Run, on force Idle
-        if (useSafeguard)
-        {
-            var st = animator.GetCurrentAnimatorStateInfo(0);
-            bool isRun = (!string.IsNullOrEmpty(runStateName) && st.IsName(runStateName));
-            bool wantIdle = !animator.GetBool(moveBool);
-            if (wantIdle && isRun && !string.IsNullOrEmpty(idleStateName))
-            {
-                animator.CrossFade(idleStateName, crossFadeTime, 0, 0f);
-            }
-        }
-
-        lastPos = transform.position;
-    }
-
-    // Gizmo pour le groundCheck
-    void OnDrawGizmosSelected()
-    {
-        if (!groundCheck) return;
-        Gizmos.color = Color.green;
-        Gizmos.DrawWireCube(groundCheck.position, groundSize);
+        // DEBUG (temporaire) : décommente si besoin
+        // Debug.Log($"[EnemyAnimatorBlend] raw={speed:F3} smoothed={smoothed:F3}");
     }
 }

@@ -788,7 +788,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 1.3
+  orthographic size: 1.76
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1832,7 +1832,7 @@ MonoBehaviour:
     CustomLookAtTarget: 0
   Lens:
     FieldOfView: 40
-    OrthographicSize: 1.3
+    OrthographicSize: 1.76
     NearClipPlane: 0.1
     FarClipPlane: 5000
     Dutch: 0
@@ -2400,14 +2400,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1853804364948628130, guid: e511409442d8b07449e07244e1f8f50a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.03
-      objectReference: {fileID: 0}
-    - target: {fileID: 1853804364948628130, guid: e511409442d8b07449e07244e1f8f50a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.79
-      objectReference: {fileID: 0}
     - target: {fileID: 2464653834053150044, guid: e511409442d8b07449e07244e1f8f50a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.6500001
@@ -2464,34 +2456,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 583494006}
-    - target: {fileID: 6650275373227057610, guid: e511409442d8b07449e07244e1f8f50a, type: 3}
-      propertyPath: target
-      value: 
-      objectReference: {fileID: 583494006}
-    - target: {fileID: 6650275373227057610, guid: e511409442d8b07449e07244e1f8f50a, type: 3}
-      propertyPath: animator
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6650275373227057610, guid: e511409442d8b07449e07244e1f8f50a, type: 3}
-      propertyPath: faceTarget
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6650275373227057610, guid: e511409442d8b07449e07244e1f8f50a, type: 3}
-      propertyPath: groundSize.x
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 6650275373227057610, guid: e511409442d8b07449e07244e1f8f50a, type: 3}
-      propertyPath: groundSize.y
-      value: -0.18
-      objectReference: {fileID: 0}
-    - target: {fileID: 6650275373227057610, guid: e511409442d8b07449e07244e1f8f50a, type: 3}
-      propertyPath: runStateName
-      value: Gunner Run Animation
-      objectReference: {fileID: 0}
-    - target: {fileID: 6650275373227057610, guid: e511409442d8b07449e07244e1f8f50a, type: 3}
-      propertyPath: idleStateName
-      value: Gunner Idle Animation
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2547,10 +2511,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2518262546502345674, guid: ba483abc75ac30b448ebad382c913e30, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2518262546502345674, guid: ba483abc75ac30b448ebad382c913e30, type: 3}
-      propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3438376258276838528, guid: ba483abc75ac30b448ebad382c913e30, type: 3}
@@ -2620,10 +2580,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2518262546502345674, guid: 868bef97b698b134a8a11b1b4488c45f, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2518262546502345674, guid: 868bef97b698b134a8a11b1b4488c45f, type: 3}
-      propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3438376258276838528, guid: 868bef97b698b134a8a11b1b4488c45f, type: 3}
