@@ -184,6 +184,15 @@ MonoBehaviour:
   muzzle: {fileID: 4149857971434921391}
   projectilePrefab: {fileID: 2971011977107958287, guid: dd567e7fc50220648abff64e1a60cd26, type: 3}
   fireCooldown: 0.5
+  aimNearestEnemy: 1
+  aimRadius: 15
+  enemyLayers:
+    serializedVersion: 2
+    m_Bits: 256
+  requireLineOfSight: 1
+  obstacleLayers:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!114 &7878718859806359553
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -280,7 +289,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxFuel: 10
-  currentFuel: 0
+  currentFuel: 10
   minFuel: 0
   fuelSlider: {fileID: 0}
   hideWhenFull: 0
