@@ -170,5 +170,5 @@ MonoBehaviour:
   lifeTime: 5
   hitMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 1
   damage: 10

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1783526302855810380}
   - component: {fileID: 7626480120634840776}
   - component: {fileID: 6269874081604769219}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: CollectableItemHealFuel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
