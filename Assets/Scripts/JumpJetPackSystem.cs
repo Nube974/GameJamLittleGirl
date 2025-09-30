@@ -28,6 +28,8 @@ public class JumpJetPackSystem : MonoBehaviour
     [SerializeField] private string exitJetpackTag = "JumpZone";
     [SerializeField] private bool enterOnce = true;
 
+
+
     Rigidbody2D rb;
     float bufferJump;
     float fuel;
@@ -116,7 +118,23 @@ public class JumpJetPackSystem : MonoBehaviour
         }
     }
 
-    void OnDrawGizmosSelected()
+    // Augmente la capacité (durée totale) du jetpack.
+    // alsoRefill = true : on ajoute aussi la même quantité au réservoir courant.
+    public void AddJetpackDuration(float extraSeconds, bool alsoRefill = true)
+    {
+        if (extraSeconds <= 0f) return;
+        jetpackDuration = Mathf.Max(0f, jetpackDuration + extraSeconds);
+        if (alsoRefill) fuel = Mathf.Min(jetpackDuration, fuel + extraSeconds);
+    }
+
+    // Remplit le réservoir (sans toucher à la capacité).
+    public void AddFuel(float seconds)
+    {
+        if (seconds <= 0f) return;
+        fuel = Mathf.Min(jetpackDuration, fuel + seconds);
+    }
+
+        void OnDrawGizmosSelected()
     {
         if (!groundCheck) return;
         Gizmos.color = Color.green;
