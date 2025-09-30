@@ -78,7 +78,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 7
   m_Sprite: {fileID: 4606908045521496030, guid: e6c11fa07bc7c1f4da4999658c4dc199, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -165,8 +165,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0176dec67605b04ca143d5229032a23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
-  maxDistance: 8
+  speed: 12
+  maxDistance: 20
   damage: 10
   hitMask:
     serializedVersion: 2

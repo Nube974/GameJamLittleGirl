@@ -1110,34 +1110,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &853550063 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2779585873197021095, guid: 66500ec79143eae4ca6a7bf442696809, type: 3}
-  m_PrefabInstance: {fileID: 97714404036855065}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &853550073
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 853550063}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 153f9fa7ff72eca429d0fc88de22c1d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxFuel: 10
-  currentFuel: 0
-  minFuel: 0
-  fuelSlider: {fileID: 780326005}
-  hideWhenFull: 0
-  OnFuelChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  OnFuelDepleted:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1001 &947175007
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1901,18 +1873,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2052831640347364984, guid: 66500ec79143eae4ca6a7bf442696809, type: 3}
+      propertyPath: m_Size.x
+      value: 18.43698
+      objectReference: {fileID: 0}
+    - target: {fileID: 2052831640347364984, guid: 66500ec79143eae4ca6a7bf442696809, type: 3}
+      propertyPath: m_Size.y
+      value: 27.925398
+      objectReference: {fileID: 0}
+    - target: {fileID: 2052831640347364984, guid: 66500ec79143eae4ca6a7bf442696809, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.05607319
+      objectReference: {fileID: 0}
+    - target: {fileID: 2052831640347364984, guid: 66500ec79143eae4ca6a7bf442696809, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.019227028
+      objectReference: {fileID: 0}
     - target: {fileID: 2779585873197021095, guid: 66500ec79143eae4ca6a7bf442696809, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 2908069262322081201, guid: 66500ec79143eae4ca6a7bf442696809, type: 3}
-      propertyPath: fuelEnergy
-      value: 
-      objectReference: {fileID: 853550073}
-    - target: {fileID: 2908069262322081201, guid: 66500ec79143eae4ca6a7bf442696809, type: 3}
-      propertyPath: jetpackFuel
-      value: 
-      objectReference: {fileID: 853550073}
+      propertyPath: groundCheckSize.x
+      value: -0.13
+      objectReference: {fileID: 0}
     - target: {fileID: 3039008021900302176, guid: 66500ec79143eae4ca6a7bf442696809, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.85
@@ -1953,17 +1937,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4724967573544392962, guid: 66500ec79143eae4ca6a7bf442696809, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 4724967573544392962, guid: 66500ec79143eae4ca6a7bf442696809, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -13.96
+      objectReference: {fileID: 0}
     - target: {fileID: 7878718859806359553, guid: 66500ec79143eae4ca6a7bf442696809, type: 3}
       propertyPath: healthSlider
       value: 
       objectReference: {fileID: 132992788}
+    - target: {fileID: 9152022042750816746, guid: 66500ec79143eae4ca6a7bf442696809, type: 3}
+      propertyPath: fuelSlider
+      value: 
+      objectReference: {fileID: 780326005}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2779585873197021095, guid: 66500ec79143eae4ca6a7bf442696809, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 853550073}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66500ec79143eae4ca6a7bf442696809, type: 3}
 --- !u!1001 &5831022031368392103
 PrefabInstance:

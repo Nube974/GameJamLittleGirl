@@ -148,7 +148,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 2}
+  m_AnchoredPosition: {x: 0, y: 2.4}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1200526794521927189
@@ -344,7 +344,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.5, y: 0.19, z: 0}
-  m_LocalScale: {x: 0.1149, y: 0.1149, z: 0.1149}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5476557768301916234}
@@ -396,7 +396,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 7
   m_Sprite: {fileID: -3561858456799500357, guid: 41e8d140cefe77445a3874aa63eae076, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -469,17 +469,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.016584754, y: 0.0033168793}
+  m_Offset: {x: 0.0014648438, y: 0.0035321712}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.1484375, y: 3.671875}
+    oldSize: {x: 2.2916667, y: 3.9166667}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2.2272608, y: 3.7265086}
+  m_Size: {x: 2.5006561, y: 3.9080462}
   m_EdgeRadius: 0
 --- !u!114 &6104985976435522704
 MonoBehaviour:
@@ -493,8 +493,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c534b9a6a11e67d48b6546c09b883679, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 1.5
-  chaseDistance: 1.24
+  movementSpeed: 7
+  chaseDistance: 11.38
   patrolOrChase: 1
   waypointsRoot: {fileID: 8463897551247831044}
   pingPong: 1
@@ -514,20 +514,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9872c8815ce65684abf0bb58c89665fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDistance: 1.24
+  attackDistance: 11.4
   damage: 10
   attackType: 1
   player: {fileID: 0}
   playerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 1
   meleePoint: {fileID: 0}
   meleeRadius: 0.6
   meleeCooldown: 0.6
   firePoint: {fileID: 5476557768301916234}
   projectilePrefab: {fileID: -8028353316528710079, guid: 4ebbd0a752d00714085d9fb6ee190417, type: 3}
   fireCooldown: 1.3
-  projectileSpeed: 1
+  projectileSpeed: 10
 --- !u!114 &6659035792955328612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -541,7 +541,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHealth: 0
-  maxHealth: 50
+  maxHealth: 30
   minHealth: 0
   healthSlider: {fileID: 1200526794521927189}
   hideSliderWhenFull: 0
