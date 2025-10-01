@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8450194613010947689}
   - component: {fileID: 6970038364910075572}
+  - component: {fileID: -5866165691457792205}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -56,3 +57,32 @@ MonoBehaviour:
   settingsPanelName: Settings Screen
   pauseKey: 27
   allowGamepadStart: 1
+--- !u!114 &-5866165691457792205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4770340312647944373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 670cc1d055416e8438c99289cfde74b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuClip: {fileID: 8300000, guid: e525bd8c3e3fab94bbb14a6350cf4ebc, type: 3}
+  level1Clip: {fileID: 8300000, guid: 3b30171f362f4fa409e301fb4624bce6, type: 3}
+  level2Clip: {fileID: 8300000, guid: ff91ccf9b8c6e4341b368bcf79514bd1, type: 3}
+  creditsClip: {fileID: 8300000, guid: 66f972ace84c58b4991bbe80377604a7, type: 3}
+  victoryClip: {fileID: 8300000, guid: 8eb7f5afd76722d4e8ac5bf968e54b14, type: 3}
+  defeatClip: {fileID: 8300000, guid: ee573ca3f4ea16644b9722885836d380, type: 3}
+  playerShootClip: {fileID: 8300000, guid: 249ce4d306216b74d96a703bd18b41df, type: 3}
+  playerJumpClip: {fileID: 8300000, guid: a6b3e9f11b70dd2419fb289606cfd48f, type: 3}
+  jetpackStartClip: {fileID: 8300000, guid: 9ca7a64e381926346ba5b9177f33871e, type: 3}
+  jetpackLoopClip: {fileID: 8300000, guid: 177af1f8ff51c8d48863d67b4d3368ca, type: 3}
+  jetpackStopClip: {fileID: 0}
+  enemyShootClip: {fileID: 8300000, guid: 8eb7f5afd76722d4e8ac5bf968e54b14, type: 3}
+  enemyDeathClip: {fileID: 8300000, guid: 40874aa74a8a0344dafd08c50be4dee3, type: 3}
+  pickupItemClip: {fileID: 8300000, guid: 9a467fd155afd6744b62cd70d6e24410, type: 3}
+  musicVolume: 0.699
+  sfxVolume: 0.597
+  fadeTime: 0.99

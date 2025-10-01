@@ -1869,6 +1869,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5866165691457792205, guid: bc4bcc594ed95164ebde4bb97c28124f, type: 3}
+      propertyPath: fadeTime
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -5866165691457792205, guid: bc4bcc594ed95164ebde4bb97c28124f, type: 3}
+      propertyPath: sfxVolume
+      value: 0.676
+      objectReference: {fileID: 0}
+    - target: {fileID: -5866165691457792205, guid: bc4bcc594ed95164ebde4bb97c28124f, type: 3}
+      propertyPath: musicVolume
+      value: 0.688
+      objectReference: {fileID: 0}
+    - target: {fileID: -5866165691457792205, guid: bc4bcc594ed95164ebde4bb97c28124f, type: 3}
+      propertyPath: enemyShootClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 6a5ad6a6412d7dd43a455985602fb274, type: 3}
+    - target: {fileID: -5866165691457792205, guid: bc4bcc594ed95164ebde4bb97c28124f, type: 3}
+      propertyPath: jetpackStartClip
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4770340312647944373, guid: bc4bcc594ed95164ebde4bb97c28124f, type: 3}
       propertyPath: m_Name
       value: GameManager

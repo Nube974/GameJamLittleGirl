@@ -56,6 +56,8 @@ public class PlayerAttack : MonoBehaviour
 
         // 4) Lance
         proj.Launch(dir.normalized, myCols);
+        AudioManager.Instance?.PlayPlayerShoot();
+
     }
 
     // ----- Helpers -----

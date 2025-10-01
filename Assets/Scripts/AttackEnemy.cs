@@ -82,6 +82,8 @@ public class AttackEnemy : MonoBehaviour
         Vector3 spawnPos = firePoint.position + (Vector3)(dir * 0.25f);
 
         var proj = Instantiate(projectilePrefab, spawnPos, Quaternion.identity);
+        AudioManager.Instance?.PlayEnemyShoot();
+
 
         // ignorer la collision avec l'ennemi tireur
         var projCol = proj.GetComponent<Collider2D>();

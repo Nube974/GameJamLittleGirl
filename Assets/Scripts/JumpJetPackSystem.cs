@@ -68,6 +68,7 @@ public class JumpJetPackSystem : MonoBehaviour
             if (grounded && bufferJump > 0f)
             {
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+                AudioManager.Instance?.PlayPlayerJump();
                 bufferJump = 0f;
             }
         }
@@ -86,6 +87,8 @@ public class JumpJetPackSystem : MonoBehaviour
                 float newVy = Mathf.MoveTowards(rb.linearVelocity.y, maxJetpackSpeed, jetpackAccel * Time.fixedDeltaTime);
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, newVy);
                 fuel -= Time.fixedDeltaTime;
+                AudioManager.Instance?.JetpackStart();
+
             }
         }
     }
@@ -111,10 +114,13 @@ public class JumpJetPackSystem : MonoBehaviour
             if (enterOnce && jetpackEnteredOnce) return;
             jetpackEnteredOnce = true;
             SwitchAction(useJetpack: true);
+            // au début de l’utilisation
+
         }
         else if (other.CompareTag(exitJetpackTag))
         {
             SwitchAction(useJetpack: false);
+            // quand on relâche/arrête
         }
     }
 

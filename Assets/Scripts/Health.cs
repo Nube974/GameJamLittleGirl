@@ -52,6 +52,7 @@ public class Health : MonoBehaviour
         if (IsDead())
         {
             OnDeath?.Invoke();
+            AudioManager.Instance?.PlayEnemyDeath();
             if (destroyOnDeath) Destroy(gameObject);
             else gameObject.SetActive(false);
         }

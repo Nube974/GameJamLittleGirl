@@ -142,7 +142,7 @@ MonoBehaviour:
   alsoRefillBonus: 1
   healAmount: 30
   pickupVFX: {fileID: 0}
-  pickupSFX: {fileID: 0}
+  pickupSFX: {fileID: 8300000, guid: 9a467fd155afd6744b62cd70d6e24410, type: 3}
   destroyOnPickup: 1
 --- !u!95 &6269874081604769219
 Animator:

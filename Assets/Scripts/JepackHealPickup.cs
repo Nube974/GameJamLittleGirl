@@ -49,7 +49,9 @@ public class JetpackAndHealPickup : MonoBehaviour
         }
 
         // 4) Retirer l’item
+        AudioManager.Instance?.PlayPickup();
         if (destroyOnPickup) Destroy(gameObject);
         else gameObject.SetActive(false);
+
     }
 }

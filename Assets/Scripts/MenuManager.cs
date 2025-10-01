@@ -168,8 +168,9 @@ public class MenuManager : MonoBehaviour
         else { paused = true; Time.timeScale = 0f; ShowPanel(pausePanel); }
     }
 
-    public void ShowVictory() { ended = true; Time.timeScale = 0f; ShowPanel(victoryPanel); }
-    public void ShowDefeat() { ended = true; Time.timeScale = 0f; ShowPanel(defeatPanel); }
+    public void ShowVictory() { ended = true; Time.timeScale = 0f; ShowPanel(victoryPanel); AudioManager.Instance?.PlayVictoryMusic(); }
+    public void ShowDefeat() { ended = true; Time.timeScale = 0f; ShowPanel(defeatPanel); AudioManager.Instance?.PlayDefeatMusic();
+    }
     public void ShowCredits() => ShowPanel(creditsPanel);
     public void ShowSettings() => ShowPanel(settingsPanel);
 
