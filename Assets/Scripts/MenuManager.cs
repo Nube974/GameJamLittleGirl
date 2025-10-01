@@ -18,7 +18,7 @@ public class MenuManager : MonoBehaviour
     public string pausePanelName = "Panel_Pause";
     public string hudPanelName = "Panel_HUD";
     public string creditsPanelName = "Panel_Credits";
-    public string settingsPanelName = "Panel_Settings";
+    public string settingsPanelName = "Settings Screen";
 
     [Header("Input")]
     public KeyCode pauseKey = KeyCode.Escape;
@@ -171,8 +171,12 @@ public class MenuManager : MonoBehaviour
     public void ShowVictory() { ended = true; Time.timeScale = 0f; ShowPanel(victoryPanel); AudioManager.Instance?.PlayVictoryMusic(); }
     public void ShowDefeat() { ended = true; Time.timeScale = 0f; ShowPanel(defeatPanel); AudioManager.Instance?.PlayDefeatMusic();
     }
-    public void ShowCredits() => ShowPanel(creditsPanel);
-    public void ShowSettings() => ShowPanel(settingsPanel);
+    public void ShowCredits() => SceneManager.LoadScene(creditsSceneName, LoadSceneMode.Single);
+    public void ShowSettings()
+    {
+        Time.timeScale = 0f;
+        ShowPanel(settingsPanel);
+    }
 
     // ---------------- Scenes ----------------
     public void StartGame() => SceneManager.LoadScene(firstGameSceneName);
