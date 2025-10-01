@@ -9,6 +9,8 @@ public class MenuManager : MonoBehaviour
     [Header("Scene names")]
     public string mainMenuSceneName = "MainMenu";
     public string firstGameSceneName = "Level_01";
+    public string secondGameSceneName = "Level_02";
+    public string creditsSceneName = "Credits";
 
     [Header("Panel names in scene (find by name, include inactive)")]
     public string victoryPanelName = "Panel_Victory";
