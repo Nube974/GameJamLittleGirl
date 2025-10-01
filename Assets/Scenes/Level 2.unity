@@ -818,6 +818,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d71672f71e5f8d745afeccca063d5e21, type: 3}
+--- !u!1 &218922078 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 763755093828790279, guid: b65342f5487012e40a2bd848ff7901df, type: 3}
+  m_PrefabInstance: {fileID: 1147134403}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &252820284
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7605,6 +7610,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2822617758471851843, guid: b65342f5487012e40a2bd848ff7901df, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2868572699862049144, guid: b65342f5487012e40a2bd848ff7901df, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -7658,12 +7667,44 @@ PrefabInstance:
       value: ToMenu
       objectReference: {fileID: 0}
     - target: {fileID: 7138600896915322360, guid: b65342f5487012e40a2bd848ff7901df, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7138600896915322360, guid: b65342f5487012e40a2bd848ff7901df, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7138600896915322360, guid: b65342f5487012e40a2bd848ff7901df, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 6970038364910075572, guid: bc4bcc594ed95164ebde4bb97c28124f, type: 3}
     - target: {fileID: 7138600896915322360, guid: b65342f5487012e40a2bd848ff7901df, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 218922078}
+    - target: {fileID: 7138600896915322360, guid: b65342f5487012e40a2bd848ff7901df, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7138600896915322360, guid: b65342f5487012e40a2bd848ff7901df, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: TogglePause
+      objectReference: {fileID: 0}
+    - target: {fileID: 7138600896915322360, guid: b65342f5487012e40a2bd848ff7901df, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 7138600896915322360, guid: b65342f5487012e40a2bd848ff7901df, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7138600896915322360, guid: b65342f5487012e40a2bd848ff7901df, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7138600896915322360, guid: b65342f5487012e40a2bd848ff7901df, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8033319375818828330, guid: b65342f5487012e40a2bd848ff7901df, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -7688,6 +7729,10 @@ PrefabInstance:
     - target: {fileID: 9149339947524322886, guid: b65342f5487012e40a2bd848ff7901df, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: LoadRestartLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 9157515604578200681, guid: b65342f5487012e40a2bd848ff7901df, type: 3}
+      propertyPath: m_text
+      value: Credits
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
