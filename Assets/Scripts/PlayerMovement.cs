@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -21,5 +22,11 @@ public class PlayerMovement : MonoBehaviour
 
             rb.linearVelocity = new Vector2(x * speed, rb.linearVelocity.y); // platformer (gravit� pour Y)
        
+    }
+
+    public void OnMove(InputAction.CallbackContext callback)
+    {
+        x  = callback.ReadValue<Vector2>().x;
+        y  = callback.ReadValue<Vector2>().y;
     }
 }

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class JumpJetPackSystem : MonoBehaviour
@@ -6,6 +7,8 @@ public class JumpJetPackSystem : MonoBehaviour
     [Header("Jump")]
     [SerializeField] private float jumpForce = 12f;   // force du saut
     [SerializeField] public bool jump = true;         // true = Saut, false = Jetpack
+    public bool jumpPressed;
+
 
     [Header("Ground Check")]
     [SerializeField] private Transform groundCheck;
@@ -49,10 +52,10 @@ public class JumpJetPackSystem : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Jump"))
+        if (jumpPressed)
             bufferJump = jumpBufferTime;
 
-        if (jump && Input.GetButtonUp("Jump") && rb.linearVelocity.y > 0f)
+        if (jump && !jumpPressed && rb.linearVelocity.y > 0f)
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * lowJumpMultiplier);
 
         if (bufferJump > 0f) bufferJump -= Time.unscaledDeltaTime;
@@ -81,7 +84,7 @@ public class JumpJetPackSystem : MonoBehaviour
                 else fuel = Mathf.Min(jetpackDuration, fuel + jetpackRechargePerSecond * Time.fixedDeltaTime);
             }
 
-            if (Input.GetButton("Jump") && fuel > 0f)
+            if (jumpPressed && fuel > 0f)
             {
                 // accélère vers maxJetpackSpeed indépendamment de la masse
                 float newVy = Mathf.MoveTowards(rb.linearVelocity.y, maxJetpackSpeed, jetpackAccel * Time.fixedDeltaTime);
@@ -90,6 +93,19 @@ public class JumpJetPackSystem : MonoBehaviour
                 AudioManager.Instance?.JetpackStart();
 
             }
+        }
+    }
+
+    public void OnJump(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            jumpPressed = true;
+        }
+
+        if (context.canceled)
+        {
+            jumpPressed = false;
         }
     }
 
